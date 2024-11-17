@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import CardsHome from "../component/cardsHome";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -12,15 +13,15 @@ export const Home = () => {
 			<p>
 				<img src={rigoImageUrl} />
 			</p>
-			<div className="alert alert-info">
-				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
+
+			<br></br><br></br><br></br>
+
+			<div className="Recomendations container border border-danger border-0 rounded ">
+<div className="Destinations">
+<h1 className="text-start">Destinos Recomendados</h1>
+</div>
+ <CardsHome/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
 			</div>
-			<p>
-				This boilerplate comes with lots of documentation:{" "}
-				<a href="https://start.4geeksacademy.com/starters/react-flask">
-					Read documentation
-				</a>
-			</p>
 		</div>
 	);
 };
