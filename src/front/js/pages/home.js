@@ -16,11 +16,19 @@ export const Home = () => {
 
 			<br></br><br></br><br></br>
 
-			<div className="Recomendations container border border-danger border-0 rounded ">
-<div className="Destinations">
-<h1 className="text-start">Destinos Recomendados</h1>
-</div>
- <CardsHome/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+			<div className="Recomendations-Destinations container border border-danger border-0 rounded ">
+
+               <h1 className="text-start p-2">Destinos recomendados</h1>
+
+                  <CardsHome/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+			</div>
+			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
+			<h1 className="text-start p-2">Alojamientos destacados</h1>
+			<CardsHome/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+			</div>
+			<div className="Recomendations-Cars container mt-5 border border-danger border-0 rounded">
+			<h1 className="text-start p-2">Carros de alquiler recomendados</h1>
+			<CardsHome/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
 			</div>
 		</div>
 	);
