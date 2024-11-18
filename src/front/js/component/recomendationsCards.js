@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-const CardsHome = () => {
+const RecomendationsCards = () => {
     return (
         
-<div className="card" style={{ width: "18rem" }}>
+<div className="card shadow m-2" style={{ width: "18rem" }}>
   <img src="..." className="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">Card title</h5>
@@ -13,4 +13,4 @@ const CardsHome = () => {
 </div>
 )
 }
-export default CardsHome; 
+export default RecomendationsCards; 
