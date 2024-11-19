@@ -5,3 +5,12 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+*/
+.navbar {
+    background-color: #CCDBFD; /* Fondo azul */
+    padding: 15px;
+}
+.Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
+    background: rgba(226, 234, 252, .4); /*Agregar la opacidad solo al fondo y no a los elementos internos*/
+    
+}
