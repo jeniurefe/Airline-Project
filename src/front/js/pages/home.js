@@ -20,9 +20,13 @@ export const Home = () => {
 
                <h1 className="text-start p-2">Destinos recomendados</h1>
 			   <div className="Destinations-Cards pb-3">
- 
-                  <RecomendationsCards/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+			      <div className="overflow-auto">
+				     <div className="row d-flex flex-row flex-nowrap">
+                       <RecomendationsCards/> <RecomendationsCards/>  <RecomendationsCards/> <RecomendationsCards/>  <RecomendationsCards/> <RecomendationsCards/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+					 </div>
 				  </div>
+
+				</div>
 			</div>
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
 			<h1 className="text-start p-2">Alojamientos destacados</h1>
