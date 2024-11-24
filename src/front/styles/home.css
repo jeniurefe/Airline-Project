@@ -9,6 +9,9 @@
     background-color: #CCDBFD; /* Fondo azul */
     padding: 15px;
 }
+.footer {
+    background-color: #CCDBFD;
+}
 .Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
     background: rgba(226, 234, 252, .4); /*Agregar la opacidad solo al fondo y no a los elementos internos*/
     
