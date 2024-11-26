@@ -72,7 +72,7 @@ export const Home = () => {
 							<div className="form-group"> <label>Fecha de Ida:</label> <input type="date" /> </div><div className="form-group"> <label>Fecha Vuelta:</label> <input type="date" /> </div>
 						</div>
 						<div className="col order-5 d-flex justify-content-start align-items-center gap-2">
-							<div className="form-group"> <label>Pasajero/Clase:</label> <input type="text" placeholder="Número de pasajeros / Clase" /></div>
+							<div className="form-group"> <label>Pasajero-Clase:</label> <input type="text" placeholder="Número de pasajeros / Clase" /></div>
 							<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 								<button class="btn btn-light" type="button">Button</button>
 							</div>
