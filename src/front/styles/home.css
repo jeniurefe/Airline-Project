@@ -16,3 +16,105 @@
     background: rgba(226, 234, 252, .4); /*Agregar la opacidad solo al fondo y no a los elementos internos*/
     
 }
+
+.tab-container {
+    background-color: #c7e5ff;
+    border-radius: 10px;
+    width: 100%; /* Cambiar a 100% para adaptarse al ancho del contenedor */
+    max-width: 1200px; /* Asegurar que no sea más ancho de 1200px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Añadir espacio interno */
+    height: auto; /* Ajusta la altura según el contenido */
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las pestañas se envuelvan si es necesario */
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #a2b7de;
+    transition: background-color 0.3s;
+    font-size: 14px; /* Tamaño de texto más pequeño */
+}
+
+.tab.active {
+    background-color: #99afd1;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.round-button {
+    width: 30px; /* Aumenta el tamaño del botón */
+    height: 30px;
+    background-color: #45709f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px; /* Aumenta el tamaño del texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px; /* Añade espacio alrededor del botón */
+}
+
+.round-button:hover {
+    background-color: #94b8de;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .tab-container {
+        padding: 10px;
+        height: auto;
+    }
+
+    .tabs {
+        flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
+    }
+
+    .tab {
+        font-size: 12px; /* Reduce el tamaño de texto en las pestañas */
+        padding: 8px;
+    }
+
+    .round-button {
+        width: 25px; /* Botones más pequeños */
+        height: 25px;
+        font-size: 10px; /* Texto más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-container {
+        padding: 5px;
+    }
+
+    .tab {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .round-button {
+        width: 20px;
+        height: 20px;
+        font-size: 8px;
+    }
+}
