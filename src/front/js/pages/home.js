@@ -18,6 +18,19 @@ export const Home = () => {
 		document.getElementById(tabId).classList.add("active");
 	};
 
+	const [origin, setOrigin] = React.useState("");
+	const [destination, setDestination] = React.useState("");
+
+	const handleSwitch = (e) => {
+		const switchContainer = e.currentTarget.closest(".switch-container");
+		switchContainer.classList.add("rotate");
+		setTimeout(() => switchContainer.classList.remove("rotate"), 500);
+
+		// Intercambia los valores de origen y destino
+		setOrigin(destination);
+		setDestination(origin);
+	};
+
 	return (
 		<div className="container-fluid">
 			<div className="tab-container p-3 mt-5">
@@ -30,43 +43,68 @@ export const Home = () => {
 					</div>
 				</div>
 				<div className="container">
-					<div className="row mt-4">
-						<div className="col-12 d-flex justify-content-start align-items-center gap-2">
-							<button type="button" className="btn btn-outline-light round-button"></button>Ida y Vuelta
-							<button type="button" className="btn btn-outline-light round-button"></button>Solo Vuelta
-						</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></input>
+						<label class="form-check-label" for="inlineRadio1">Ida y Vuelta</label>
 					</div>
-
-
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"></input>
+						<label class="form-check-label" for="inlineRadio2">Solo vuelta</label>
+					</div>
 					<div className="row mt-5">
-						<div className="col d-flex justify-content-start align-items-center gap-3">
-							<div className="flight-booking-container">
-								<form className="booking-form"></form>
+						<div className="col-5 d-flex justify-content-start align-items-center gap-3">
+							<div className="origin-container">
+
 								<div className="form-group">
-									<img width="24" height="24" src="https://img.icons8.com/material-rounded/24/airplane-take-off.png" alt="airplane-take-off" />
-									<label>Ingrese el Origen:</label>
-									<input type="text" placeholder="Ciudad de origen" />
+									<img
+										width="24"
+										height="24"
+										src="https://img.icons8.com/material-rounded/24/airplane-take-off.png"
+										alt="airplane-take-off"
+									/>
+									<label className="label">From</label>
+									<input
+										type="text"
+										placeholder="Enter City or Airport"
+										className="input-field"
+										value={origin}
+										onChange={(e) => setOrigin(e.target.value)}
+									/>
 								</div>
 							</div>
 
-							{/* Switch entre Origen y Destino */}
 							<div className="switch-container d-flex align-items-center">
 								<button
 									type="button"
 									className="btn btn-outline switch-btn"
-									onClick={() => console.log("Switch entre Origen y Destino")}
+									onClick={handleSwitch}
 								>
-									<img width="24" height="24" src="https://img.icons8.com/forma-light-filled/24/switch.png" alt="switch"/>
+									<img
+										width="24"
+										height="24"
+										src="https://img.icons8.com/forma-light-filled/24/switch.png"
+										alt="switch"
+									/>
 								</button>
 							</div>
 
 							<div className="form-group">
-								<img width="24" height="24" src="https://img.icons8.com/fluency-systems-filled/50/airplane-landing.png" alt="airplane-landing" />
-								<label>Ingrese el Destino:</label>
-								<input type="text" placeholder="Ciudad de destino" />
+								<img
+									width="24"
+									height="24"
+									src="https://img.icons8.com/fluency-systems-filled/50/airplane-landing.png"
+									alt="airplane-landing"
+								/>
+								<label classNam='label'>Ingrese el Destino:</label>
+								<input
+									type="text"
+									placeholder="Ciudad de destino"
+									value={destination}
+									onChange={(e) => setDestination(e.target.value)}
+									className="Input-field"
+								/>
 							</div>
 						</div>
-
 						<br></br><br></br><br></br>
 						<div className="col order-1 d-flex justify-content-start align-items-center gap-2">
 							<div className="form-group"> <label>Fecha de Ida:</label> <input type="date" /> </div><div className="form-group"> <label>Fecha Vuelta:</label> <input type="date" /> </div>
@@ -97,51 +135,51 @@ export const Home = () => {
 				<div className="Hotels-Cards pb-3">
 					<RecomendationsCards /> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
 				</div>
-               <h1 className="text-start p-2">Destinos recomendados</h1>
-			   <div className="Destinations-Cards pb-3 ">
-			      <div id="carouselRecomendations" className="carousel slide">
-				      <div className="carousel-inner ">
-						  <div className="carousel-item active">
-							
-						    <RecomendationsCards/>
-						  </div>
-						  <div className="carousel-item">
-						    <RecomendationsCards/>
-						  </div>
-						  <div className="carousel-item">
-						    <RecomendationsCards/>
-						  </div>
-						  <div className="carousel-item">
-						    <RecomendationsCards/>
-						  </div>
-						  <div className="carousel-item">
-						    <RecomendationsCards/>
-						  </div>
-						  <div className="carousel-item">
-						    <RecomendationsCards/>
-						  </div>
-						  <button className="carousel-control-prev"  type="button" data-bs-target="#carouselRecomendations" data-bs-slide="prev">
-                           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                           <span className="visually-hidden">Previous</span>
-                          </button>
-                          <button className="carousel-control-next" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="next">
-                           <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                           <span className="visually-hidden">Next</span>
-                          </button>
-					 </div>
-				  </div>
+				<h1 className="text-start p-2">Destinos recomendados</h1>
+				<div className="Destinations-Cards pb-3 ">
+					<div id="carouselRecomendations" className="carousel slide">
+						<div className="carousel-inner ">
+							<div className="carousel-item active">
+
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<button className="carousel-control-prev" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="prev">
+								<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span className="visually-hidden">Previous</span>
+							</button>
+							<button className="carousel-control-next" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="next">
+								<span className="carousel-control-next-icon" aria-hidden="true"></span>
+								<span className="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
 
 				</div>
 			</div>
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
-			<h1 className="text-start p-2">Alojamientos destacados</h1>
-			<div className="Hotels-Cards pb-3">
-			<div className="overflow-auto">
-				     <div className="row d-flex flex-row flex-nowrap">
-                       <RecomendationsCards/> <RecomendationsCards/>  <RecomendationsCards/> <RecomendationsCards/>  <RecomendationsCards/> <RecomendationsCards/> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
-					 </div>
-				  </div>
-			</div>
+				<h1 className="text-start p-2">Alojamientos destacados</h1>
+				<div className="Hotels-Cards pb-3">
+					<div className="overflow-auto">
+						<div className="row d-flex flex-row flex-nowrap">
+							<RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards /> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
+						</div>
+					</div>
+				</div>
 			</div>
 			<div className="Recomendations-Cars container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Carros de alquiler recomendados</h1>

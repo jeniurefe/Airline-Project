@@ -5,10 +5,6 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-.navbar {
-    background-color: #CCDBFD; /* Fondo azul */
-    padding: 15px;
-}
 .footer {
     background-color: #CCDBFD;
 }
@@ -45,7 +41,7 @@
     border-radius: 10px 10px 0 0;
     background-color: #a2b7de;
     transition: background-color 0.3s;
-    font-size: 14px; /* Tamaño de texto más pequeño */
+    font-size: 16px;
 }
 
 .tab.active {
@@ -60,24 +56,60 @@
     display: block;
 }
 
-.round-button {
-    width: 30px; /* Aumenta el tamaño del botón */
-    height: 30px;
-    background-color: #45709f;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 12px; /* Aumenta el tamaño del texto */
+.origin-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 5px; /* Añade espacio alrededor del botón */
+    justify-content: start;
+    background-color: #ffffff; /* Fondo azul claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 16px;
+    height: 80px;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
-.round-button:hover {
-    background-color: #94b8de;
+.form-group {
+    flex-direction: column;
 }
+  
+.input-field {
+    border: none;
+    background: none;
+    outline: none;
+    color: #007bff;
+    font-size: 16px;
+    width: 100%;
+}
+  
+.input-field::placeholder {
+    color: #007bff;
+    opacity: 0.5; /* Transparencia del placeholder */
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000; /* Azul fuerte */
+    margin-bottom: 5px;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
+  .switch-container {
+    transition: transform 0.9s ease; /* Suavidad de la rotación */
+  }
+  
+  .rotate {
+    animation: rotate 0.9s ease; /* La duración de la animación */
+  }
+  
 
 /* Media Queries para dispositivos más pequeños */
 @media (max-width: 768px) {
@@ -110,11 +142,5 @@
     .tab {
         font-size: 10px;
         padding: 6px;
-    }
-
-    .round-button {
-        width: 20px;
-        height: 20px;
-        font-size: 8px;
     }
 }

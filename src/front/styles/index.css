@@ -2,6 +2,7 @@
     General Styles used on every website (Don't Repeat Yourself)
 */
 .navbar {
-    background-color: #fc9e4f; 
+    background-color: #ABC4FF; 
     padding: 15px;
+    font-family:sans-serif;
 }
