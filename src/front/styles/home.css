@@ -6,7 +6,14 @@
     on that page only (the ones not reused in other pages).
 */
 .footer {
-    background-color: #CCDBFD;
+    background-color: #ABC4FF;
+}
+.About-Us a:link{
+    color:white;
+}
+.About-Us a:hover { 
+    color:green;
+
 }
 .Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
     background: rgba(226, 234, 252, .4); /*Agregar la opacidad solo al fondo y no a los elementos internos*/
