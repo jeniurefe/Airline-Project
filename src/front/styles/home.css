@@ -8,10 +8,8 @@
 .footer {
     background-color: #ABC4FF;
 }
-.About-Us a:link{
-    color:white;
-}
-.About-Us a:hover { 
+
+a:hover { 
     color:green;
 
 }
