@@ -15,8 +15,13 @@ export const Footer = () => (
 		      <p className="m-3 text-light">Atención al cliente</p>
 		      <p className="m-3 text-light">Garantía de servicio</p>
 		      <p className="m-3 text-light">Más información sobre servicios</p>
+			  <div className="Icons d-flex justify-content-start">
+			  <i class="fa-brands fa-facebook fa-lg m-1"></i>
+			  <i class="fab fa-instagram-square fa-lg m-1"></i>
+			  <i class="fab fa-whatsapp-square fa-lg m-1"></i>
+			  </div>
 		   </div>
-		    <div className="Third-Column col ">
+		    <div className="Third-Column col">
 		      <h5 className="mt-3 text-light">Formas de pago</h5>
 		      <div className="Icons d-flex justify-content-start">
 			  <div><i className="fa-brands fa-cc-visa fa-xl m-1"></i></div>
