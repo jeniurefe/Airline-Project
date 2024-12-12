@@ -226,8 +226,6 @@ export const Home = () => {
 							</button>
 						</div>
 					</div>
-<<<<<<< HEAD
-=======
 
 				</div>
 			</div>
@@ -241,7 +239,6 @@ export const Home = () => {
 							<RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards /> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
 						</div>
 					</div>
->>>>>>> Jeni
 				</div>
 				
 			</div>
