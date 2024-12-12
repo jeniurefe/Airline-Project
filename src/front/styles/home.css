@@ -87,7 +87,7 @@ a:hover {
 }
   
 .input-field::placeholder {
-    color: #007bff;
+    color: #33383d;
     opacity: 0.5; /* Transparencia del placeholder */
 }
 
