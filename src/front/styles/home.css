@@ -9,8 +9,14 @@
     background-color: #ABC4FF;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
 a:hover { 
-    color:green;
+    color:white;
+    font-weight: bold;
+    text-decoration: underline;
 
 }
 .Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
