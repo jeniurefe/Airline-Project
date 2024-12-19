@@ -3,6 +3,9 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import RecomendationsCards from "../component/recomendationsCards";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -24,6 +27,26 @@ export const Home = () => {
 		setOrigin(destination);
 		setDestination(origin);
 	};
+	const responsive = {
+		superLargeDesktop: {
+		  // the naming can be any, depends on you.
+		  breakpoint: { max: 4000, min: 3000 },
+		  items: 5
+		},
+		desktop: {
+		  breakpoint: { max: 3000, min: 1024 },
+		  items: 3
+		},
+		tablet: {
+		  breakpoint: { max: 1024, min: 464 },
+		  items: 2
+		},
+		mobile: {
+		  breakpoint: { max: 464, min: 0 },
+		  items: 1
+		}
+	  };
+	  
 
 
 	return (
@@ -142,7 +165,7 @@ export const Home = () => {
 
 									</div>
 									<div className="col align-items-center">
-									<div className="form-group">
+										<div className="form-group">
 											<label>Fecha de Ida:</label>
 											<input type="date" />
 										</div><div className="form-group"><label>Fecha Vuelta:</label><input type="date" /></div>
@@ -194,27 +217,27 @@ export const Home = () => {
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Alojamientos destacados</h1>
 				<div className="Hotels-Cards pb-3">
-					<div id="carouselRecomendations" className="carousel slide">
+					{/* <div id="carouselRecomendations" className="carousel carousel-dark slide">
 						<div className="carousel-inner ">
 							<div className="carousel-item active">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
+							<div className="carousel-item">
+								<RecomendationsCards />
+							</div>
 
-								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="prev">
 								<span className="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span className="visually-hidden">Previous</span>
@@ -224,23 +247,17 @@ export const Home = () => {
 								<span className="visually-hidden">Next</span>
 							</button>
 						</div>
-					</div>
+					</div> */}
+					<Carousel responsive={responsive}>
+					<RecomendationsCards />
+					<RecomendationsCards />
+					<RecomendationsCards />
+					<RecomendationsCards />
+					</Carousel>;
 
 				</div>
 			</div>
 
-
-			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
-				<h1 className="text-start p-2">Alojamientos destacados</h1>
-				<div className="Hotels-Cards pb-3">
-					<div className="overflow-auto">
-						<div className="row d-flex flex-row flex-nowrap">
-							<RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards /> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
-						</div>
-					</div>
-				</div>
-
-			</div>
 			<div className="Recomendations-Cars container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Carros de alquiler recomendados</h1>
 				<div className="Cars-Cards pb-3">
