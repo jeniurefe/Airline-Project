@@ -23,10 +23,9 @@ export const Navbar = () => {
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><span class="dropdown-item-text">Dropdown item text</span></li>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Home</a></li>
+                                <li><a class="dropdown-item" href="#">Home</a></li>
+                                <li><a class="dropdown-item" href="#">Home</a></li>
                             </ul>
                         </li>
                         <li className="nav-item">
@@ -39,16 +38,17 @@ export const Navbar = () => {
                             <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Información
                             </a>
-                            <ul className="dropdown-menu t" aria-labelledby="navbarDropdownMenuLink" style={{ width: '1000px', height: 'auto' }}>
+                            <ul className="dropdown-menu t" aria-labelledby="navbarDropdownMenuLink" style={{ width: '750px', height: 'auto' }}>
                                 <div class="row">
                                     <div class="col">
-                                        <li><span class="dropdown-item-text">Dropdown item text</span></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <h2 className="mt-2 p-2"> Información</h2>
+                                        <li><a class="dropdown-item" href="#">Estado de vuelos</a></li>
+                                        <li><a class="dropdown-item" href="#">Atención al cliente</a></li>
+                                        <li><a class="dropdown-item" href="#">Equipaje</a></li>
+                                        <li><a class="dropdown-item" href="#">Requisitos</a></li>
                                     </div>
                                     <div class="col">
-                                        2 of 2
+                                    <img className="rounded-end" width="350" height="300" src="https://i.pinimg.com/736x/42/94/7f/42947f5d3e8e4b86813561066fc16936.jpg" alt="" />
                                     </div>
                                 </div>
                             </ul>

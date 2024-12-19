@@ -14,27 +14,27 @@ a:hover {
 
 }
 .Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
-    background: rgba(226, 234, 252, .4); /*Agregar la opacidad solo al fondo y no a los elementos internos*/
+    background: rgba(226, 234, 252, .4); 
     
 }
 
 .tab-container {
     background-color: #c7e5ff;
     border-radius: 10px;
-    width: 100%; /* Cambiar a 100% para adaptarse al ancho del contenedor */
-    max-width: 1200px; /* Asegurar que no sea más ancho de 1200px */
+    width: 100%; 
+    max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Añadir espacio interno */
-    height: auto; /* Ajusta la altura según el contenido */
+    margin: 0 auto;
+    padding: 20px; 
+    height: auto; 
 }
 
 .tabs {
     display: flex;
-    flex-wrap: wrap; /* Permite que las pestañas se envuelvan si es necesario */
+    flex-wrap: wrap; 
     cursor: pointer;
     margin-bottom: 20px;
 }
@@ -69,8 +69,20 @@ a:hover {
     border-radius: 10px; /* Bordes redondeados */
     padding: 16px;
     height: 80px;
-    max-width: 500px;
+    width: 250px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.destination-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 16px;
+    height: 80px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
