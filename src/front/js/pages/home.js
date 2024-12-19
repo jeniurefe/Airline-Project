@@ -25,6 +25,7 @@ export const Home = () => {
 		setDestination(origin);
 	};
 
+
 	return (
 		<div className="container-fluid">
 			<div className="tab-container p-3 mt-5">
@@ -120,32 +121,35 @@ export const Home = () => {
 										</button>
 									</div>
 
-									<div className="form-group">
-										<img
-											width="24"
-											height="24"
-											src="https://img.icons8.com/fluency-systems-filled/50/airplane-landing.png"
-											alt="airplane-landing"
-										/>
-										<label className="label">To</label>
-										<input
-											type="text"
-											placeholder="Enter Destination"
-											value={destination}
-											onChange={(e) => setDestination(e.target.value)}
-											className="input-field"
-										/>
-									</div>
-
-									<div className="col align-items-center">
+									<div className="destination-container">
 										<div className="form-group">
+											<img
+												width="24"
+												height="24"
+												src="https://img.icons8.com/fluency-systems-filled/50/airplane-landing.png"
+												alt="airplane-landing"
+											/>
+											<label className="label">To</label>
+											<input
+												type="text"
+												placeholder="Enter Destination"
+												className="input-field"
+												value={destination}
+												onChange={(e) => setDestination(e.target.value)}
+											/>
+										</div>
+
+
+									</div>
+									<div className="col align-items-center">
+									<div className="form-group">
 											<label>Fecha de Ida:</label>
-											<input type="date" /> 
+											<input type="date" />
 										</div><div className="form-group"><label>Fecha Vuelta:</label><input type="date" /></div>
 									</div>
 									<div className="col order-last d-flex justify-content-end gap-2">
-										<div className="form-group"> 
-											<label>Pasajero-Clase:</label> 
+										<div className="form-group">
+											<label>Pasajero-Clase:</label>
 											<input type="text" placeholder="Número de pasajeros / Clase" />
 										</div>
 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -157,26 +161,21 @@ export const Home = () => {
 								</div>
 							</div>
 
-							{activeTab === "flight-hotel" && (
-								<div id="flight-hotel" className="tab-content active">
-									{/* Flight & Hotel booking content here */}
-									<p>Flight & Hotel booking section</p>
-								</div>
-							)}
-
-							{activeTab === "hotel" && (
-								<div id="hotel" className="tab-content active">
-									{/*  Hotel booking content here */}
-									<p>Hotel</p>
-								</div>
-							)}
-
-							{activeTab === "car" && (
-								<div id="car" className="tab-content active">
-									{/* Flight & Hotel booking content here */}
-									<p>seccion car</p>
-								</div>
-							)}
+						</div>
+					)}
+					{activeTab === "flight-hotel" && (
+						<div id="flight-hotel" className="tab-content active">
+							<p>Flight & Hotel booking content</p>
+						</div>
+					)}
+					{activeTab === "hotel" && (
+						<div id="hotel" className="tab-content active">
+							<p>Hotel booking content</p>
+						</div>
+					)}
+					{activeTab === "car" && (
+						<div id="car" className="tab-content active">
+							<p>Car rental booking content</p>
 						</div>
 					)}
 				</div>
@@ -195,7 +194,7 @@ export const Home = () => {
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Alojamientos destacados</h1>
 				<div className="Hotels-Cards pb-3">
-				<div id="carouselRecomendations" className="carousel slide">
+					<div id="carouselRecomendations" className="carousel slide">
 						<div className="carousel-inner ">
 							<div className="carousel-item active">
 
@@ -241,7 +240,7 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 =======
 >>>>>>> b955fa01a07e58ceb0ef9e5933b916592356189c
