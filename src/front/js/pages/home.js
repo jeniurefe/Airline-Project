@@ -29,24 +29,24 @@ export const Home = () => {
 	};
 	const responsive = {
 		superLargeDesktop: {
-		  // the naming can be any, depends on you.
-		  breakpoint: { max: 4000, min: 3000 },
-		  items: 5
+			// the naming can be any, depends on you.
+			breakpoint: { max: 4000, min: 3000 },
+			items: 5
 		},
 		desktop: {
-		  breakpoint: { max: 3000, min: 1024 },
-		  items: 3
+			breakpoint: { max: 3000, min: 1024 },
+			items: 3
 		},
 		tablet: {
-		  breakpoint: { max: 1024, min: 464 },
-		  items: 2
+			breakpoint: { max: 1024, min: 464 },
+			items: 2
 		},
 		mobile: {
-		  breakpoint: { max: 464, min: 0 },
-		  items: 1
+			breakpoint: { max: 464, min: 0 },
+			items: 1
 		}
-	  };
-	  
+	};
+
 
 
 	return (
@@ -217,26 +217,25 @@ export const Home = () => {
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Alojamientos destacados</h1>
 				<div className="Hotels-Cards pb-3">
-					{/* <div id="carouselRecomendations" className="carousel carousel-dark slide">
+					<div id="carouselRecomendations" className="carousel carousel-dark slide">
 						<div className="carousel-inner ">
 							<div className="carousel-item active">
+								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
+								<RecomendationsCards />
+								<RecomendationsCards />
+								<RecomendationsCards />
+								</div>
 							</div>
 							<div className="carousel-item">
+								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
+								</div>
 							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
+							
 
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="prev">
 								<span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -247,13 +246,9 @@ export const Home = () => {
 								<span className="visually-hidden">Next</span>
 							</button>
 						</div>
-					</div> */}
-					<Carousel responsive={responsive}>
-					<RecomendationsCards />
-					<RecomendationsCards />
-					<RecomendationsCards />
-					<RecomendationsCards />
-					</Carousel>;
+					</div>
+
+
 
 				</div>
 			</div>
