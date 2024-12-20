@@ -233,26 +233,25 @@ export const Home = () => {
 			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Alojamientos destacados</h1>
 				<div className="Hotels-Cards pb-3">
-					{/* <div id="carouselRecomendations" className="carousel carousel-dark slide">
+					<div id="carouselRecomendations" className="carousel carousel-dark slide">
 						<div className="carousel-inner ">
 							<div className="carousel-item active">
+								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
+								<RecomendationsCards />
+								<RecomendationsCards />
+								<RecomendationsCards />
+								</div>
 							</div>
 							<div className="carousel-item">
+								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
-							</div>
-							<div className="carousel-item">
 								<RecomendationsCards />
+								</div>
 							</div>
-							<div className="carousel-item">
-								<RecomendationsCards />
-							</div>
+							
 
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselRecomendations" data-bs-slide="prev">
 								<span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -263,29 +262,11 @@ export const Home = () => {
 								<span className="visually-hidden">Next</span>
 							</button>
 						</div>
-					</div> */}
-					<Carousel responsive={responsive}>
-						<RecomendationsCards />
-						<RecomendationsCards />
-						<RecomendationsCards />
-						<RecomendationsCards />
-					</Carousel>;
-
-				</div>
-			</div>
-
-
-			<div className="Recomendations-Hotels container mt-5 border border-danger border-0 rounded">
-				<h1 className="text-start p-2">Alojamientos destacados</h1>
-				<div className="Hotels-Cards pb-3">
-					<div className="overflow-auto">
-						<div className="row d-flex flex-row flex-nowrap">
-							<RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards />  <RecomendationsCards /> <RecomendationsCards /> {/*Hay que mapear la carta, para que conforme se vayan agregando, vayan apareciendo las cartas */}
-						</div>
 					</div>
-				</div>
 
+				</div>
 			</div>
+
 			<div className="Recomendations-Cars container mt-5 border border-danger border-0 rounded">
 				<h1 className="text-start p-2">Carros de alquiler recomendados</h1>
 				<div className="Cars-Cards pb-3">
