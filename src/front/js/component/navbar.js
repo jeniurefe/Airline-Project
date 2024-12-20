@@ -39,15 +39,15 @@ export const Navbar = () => {
                                 Información
                             </a>
                             <ul className="dropdown-menu t" aria-labelledby="navbarDropdownMenuLink" style={{ width: '750px', height: 'auto' }}>
-                                <div class="row">
-                                    <div class="col">
+                                <div className="row">
+                                    <div className="col">
                                         <h2 className="mt-2 p-2"> Información</h2>
-                                        <li><a class="dropdown-item" href="#">Estado de vuelos</a></li>
-                                        <li><a class="dropdown-item" href="#">Atención al cliente</a></li>
-                                        <li><a class="dropdown-item" href="#">Equipaje</a></li>
-                                        <li><a class="dropdown-item" href="#">Requisitos</a></li>
+                                        <li><a className="dropdown-item" href="#">Estado de vuelos</a></li>
+                                        <li><a className="dropdown-item" href="#">Atención al cliente</a></li>
+                                        <li><a className="dropdown-item" href="#">Equipaje</a></li>
+                                        <li><a className="dropdown-item" href="#">Requisitos</a></li>
                                     </div>
-                                    <div class="col">
+                                    <div className="col">
                                     <img className="rounded-end" width="350" height="300" src="https://i.pinimg.com/736x/42/94/7f/42947f5d3e8e4b86813561066fc16936.jpg" alt="" />
                                     </div>
                                 </div>
