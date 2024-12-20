@@ -27,26 +27,27 @@ export const Home = () => {
 		setOrigin(destination);
 		setDestination(origin);
 	};
+	
 	const responsive = {
 		superLargeDesktop: {
-		  // the naming can be any, depends on you.
-		  breakpoint: { max: 4000, min: 3000 },
-		  items: 5
+			// the naming can be any, depends on you.
+			breakpoint: { max: 4000, min: 3000 },
+			items: 5
 		},
 		desktop: {
-		  breakpoint: { max: 3000, min: 1024 },
-		  items: 3
+			breakpoint: { max: 3000, min: 1024 },
+			items: 3
 		},
 		tablet: {
-		  breakpoint: { max: 1024, min: 464 },
-		  items: 2
+			breakpoint: { max: 1024, min: 464 },
+			items: 2
 		},
 		mobile: {
-		  breakpoint: { max: 464, min: 0 },
-		  items: 1
+			breakpoint: { max: 464, min: 0 },
+			items: 1
 		}
-	  };
-	  
+	};
+
 
 
 	return (
@@ -164,16 +165,31 @@ export const Home = () => {
 
 
 									</div>
-									<div className="col align-items-center">
+									<div className="col d-flex align-items-center">
 										<div className="form-group">
 											<label>Fecha de Ida:</label>
 											<input type="date" />
-										</div><div className="form-group"><label>Fecha Vuelta:</label><input type="date" /></div>
+										</div>
+										<div className="form-group ms-2">
+											<label>Fecha Vuelta:</label><input type="date" />
+										</div>
 									</div>
 									<div className="col order-last d-flex justify-content-end gap-2">
-										<div className="form-group">
-											<label>Pasajero-Clase:</label>
-											<input type="text" placeholder="Número de pasajeros / Clase" />
+										<div className="dropdown">
+											<button className="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+												Pasajeros & Clases
+											</button>
+											<ul className="dropdown-menu" aria-labelledby="dropdownMenu2" style={{ width: '600px', height: 'auto' }}>
+												<div className="row">
+													<p>Please select the exact number of passengers to view the best prices</p>
+													<div className="col-7">
+														<li><button className="dropdown-item" type="">Action</button></li>
+														<li><button className="dropdown-item" type="">Another action</button></li>
+														<li><button className="dropdown-item" type="">Something else here</button></li>
+													</div>
+													<div className="col-3">Hola</div>
+												</div>
+											</ul>
 										</div>
 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 											<button class="btn btn-light" type="button">Button</button>
@@ -249,10 +265,10 @@ export const Home = () => {
 						</div>
 					</div> */}
 					<Carousel responsive={responsive}>
-					<RecomendationsCards />
-					<RecomendationsCards />
-					<RecomendationsCards />
-					<RecomendationsCards />
+						<RecomendationsCards />
+						<RecomendationsCards />
+						<RecomendationsCards />
+						<RecomendationsCards />
 					</Carousel>;
 
 				</div>
