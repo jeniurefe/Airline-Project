@@ -5,7 +5,165 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-.navbar {
-    background-color: #CCDBFD; /* Fondo azul */
-    padding: 15px;
+.footer {
+    background-color: #ABC4FF;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover { 
+    color:white;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.Recomendations-Destinations, .Recomendations-Hotels, .Recomendations-Cars  {
+    background: rgba(226, 234, 252, .4); 
+    
+}
+
+.tab-container {
+    background-color: #c7e5ff;
+    border-radius: 10px;
+    width: 100%; 
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px; 
+    height: auto; 
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap; 
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #a2b7de;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.tab.active {
+    background-color: #99afd1;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.origin-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #ffffff; /* Fondo azul claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 16px;
+    height: 80px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.destination-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 16px;
+    height: 80px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    flex-direction: column;
+}
+  
+.input-field {
+    border: none;
+    background: none;
+    outline: none;
+    color: #007bff;
+    font-size: 16px;
+    width: 100%;
+}
+  
+.input-field::placeholder {
+    color: #33383d;
+    opacity: 0.5; /* Transparencia del placeholder */
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000; /* Azul fuerte */
+    margin-bottom: 5px;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
+  .switch-container {
+    transition: transform 0.9s ease; /* Suavidad de la rotación */
+  }
+  
+  .rotate {
+    animation: rotate 0.9s ease; /* La duración de la animación */
+  }
+  
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .tab-container {
+        padding: 10px;
+        height: auto;
+    }
+
+    .tabs {
+        flex-direction: column; /* Cambia a una columna para pantallas más pequeñas */
+    }
+
+    .tab {
+        font-size: 12px; /* Reduce el tamaño de texto en las pestañas */
+        padding: 8px;
+    }
+
+    .round-button {
+        width: 25px; /* Botones más pequeños */
+        height: 25px;
+        font-size: 10px; /* Texto más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-container {
+        padding: 5px;
+    }
+
+    .tab {
+        font-size: 10px;
+        padding: 6px;
+    }
 }
