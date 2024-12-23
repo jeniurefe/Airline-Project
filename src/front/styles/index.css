@@ -6,3 +6,17 @@
     padding: 15px;
     font-family:sans-serif;
 }
+.footer {
+    background-color: #ABC4FF;
+}
+
+a  {
+    text-decoration: none; /* para los links del footer*/
+    color: white;
+}
+.Footer-Links:hover { 
+    color:white;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
