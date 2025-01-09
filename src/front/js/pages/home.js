@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import RecomendationsCards from "../component/recomendationsCards";
+import SeeMoreCard from "../component/seeMoreCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -234,17 +235,16 @@ export const Home = () => {
 								<RecomendationsCards />
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
 								</div>
 							</div>
 							<div className="carousel-item">
 								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
-								<RecomendationsCards />
+								<SeeMoreCard />
 								</div>
 							</div>
+							
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselDestinations" data-bs-slide="prev">
 								<span className="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span className="visually-hidden">Previous</span>
@@ -267,15 +267,13 @@ export const Home = () => {
 								<RecomendationsCards />
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
 								</div>
 							</div>
 							<div className="carousel-item">
 								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
-								<RecomendationsCards />
+								<SeeMoreCard />
 								</div>
 							</div>
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselHotels" data-bs-slide="prev">
@@ -302,15 +300,13 @@ export const Home = () => {
 								<RecomendationsCards />
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
 								</div>
 							</div>
 							<div className="carousel-item">
 								<div className="d-flex justify-content-center gap-3">
 								<RecomendationsCards />
 								<RecomendationsCards />
-								<RecomendationsCards />
-								<RecomendationsCards />
+								<SeeMoreCard/>
 								</div>
 							</div>
 							<button className="carousel-control-prev" type="button" data-bs-target="#carouselCars" data-bs-slide="prev">
