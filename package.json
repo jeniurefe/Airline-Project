@@ -73,9 +73,13 @@
 		]
 	},
 	"dependencies": {
+		"date-fns": "^4.1.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-date-range": "^2.0.1",
+		"react-datepicker": "^7.5.0",
 		"react-dom": "^16.8.4",
+		"react-multi-carousel": "^2.8.5",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^6.3.0"
 	}
