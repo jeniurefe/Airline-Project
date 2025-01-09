@@ -15,7 +15,7 @@ export const Footer = () => (
 					<p><a href="" className="Footer-Links m-3">Atención al cliente</a></p>
 					<p><a href="" className="Footer-Links m-3">Garantía de servicio</a></p>
 					<p><a href="" className="Footer-Links m-3">Más información sobre servicios</a></p>
-					<div className="Social-Icons d-flex justify-content-start">
+					<div className="Social-Icons d-flex px-3">
 						<i className="fa-brands fa-facebook fa-lg m-1 "></i>
 						<i className="fab fa-instagram-square fa-lg m-1"></i>
 						<i className="fab fa-whatsapp-square fa-lg m-1"></i>
